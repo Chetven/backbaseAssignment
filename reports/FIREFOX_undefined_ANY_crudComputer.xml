@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="crudComputer"
+    errors="0" failures="0" hostname="" id="" package="crudComputer" skipped="0"
+    tests="3" time="13.56" timestamp="Sun, 30 Jul 2017 08:18:28 GMT">
+  
+    <testcase name="Create and read a new computer" classname="crudComputer" time="7.873" assertions="12">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Update and read a computer" classname="crudComputer" time="3.869" assertions="12">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Delete a computer" classname="crudComputer" time="1.820" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
