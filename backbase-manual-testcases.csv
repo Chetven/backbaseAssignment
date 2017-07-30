@@ -1,0 +1,27 @@
+Test name,Description,Prerequisites,Steps,Action,Expected results,Actual Result,Notes
+,,,,,,,
+InputValidation,To Validate input fields and buttons,"User is on the computer database page and clicks on ""add a new computer"" ",1,"Click on ""Create this computer"" button whithout entering any data",You should see a validation error with Computer name row marked Red as it is a required field,PASS,
+,,,2,"Enter computer name, Enter Introduced date as ""1984/03/01"" and Discontinued date as ""1984/03/01"" and click ""Create this computer"" button","You should see a validation error with ""Introduces date"" and ""Discontinued date"" rows marked Red as it is incorrect date format",PASS,
+,,,3,"Enter computer name, Enter Introduced date as ""1984-03-02"" and Discontinued date as ""1984-03-01"" and click on ""Create this computer""",You should see a validation error saying the Discontinued date should be later than Introduced date,FAIL,This is probably not implemented to keep the system basic
+,,,4,"Enter computer name, Enter Introduced date as ""1984-03-01"" and Discontinued date as ""1984-03-02"" and click on ""Cancel""",You should go back to the homepage and no new computer created,PASS,
+,,,,,,,
+Create&Read1,To create a computer with all inputs and read the details on successful creation,"User is on the computer database page and clicks on ""add a new computer"" ",1,"Enter computer name as ""A.J.G.L.U. 2000"", Introduced date as ""1984-03-01"", Discontinued date as ""1995-03-02"" and company as""Netronics"" and click on ""Create this computer""","You should go back to the homepage and see a Success message saying ""Done! Computer A.J.G.L.U. 2000 has been created""",PASS,
+,,,2,Check if the A.J.G.L.U. 2000 is in the table,You should see computer name A.J.G.L.U. 2000 and all the other details that was entered while creating the computer,PASS,
+,,,,,,,
+Create&Read2,To create a computer only with computer name and read the details on successful creation,"User is on the computer database page and clicks on ""add a new computer"" ",1,"Enter computer name as ""A.J.G.L.U. 2001"" and click on ""Create this computer""","You should go back to the homepage and see a Success message saying ""Done! Computer A.J.G.L.U. 2001 has been created""",PASS,
+,,,2,Check if the A.J.G.L.U. 2001 is in the table,"You should see computer name A.J.G.L.U. 2001 and ""-"" in the other cells in that row because only computer name was entered while creation ",PASS,
+,,,,,,,
+Update&Read,To update the existing computer and read on successful updation,"User is on the ""Edit computer"" page by clicking on ""A.J.G.L.U. 2001""",1,"Enter Introduced date as ""1987-04-01"", Discontinued date as ""1997-06-02"" and company as""Netronics"" and click on ""Save this computer""","You should go back to the homepage and see a Success message saying ""Done! Computer A.J.G.L.U. 2001 has been Updated""",PASS,
+,,,2,Check the A.J.G.L.U. 2001 in the table,You should see computer name A.J.G.L.U. 2001 and the data in the other cells being updated with what was filled in while updating,PASS,
+,,,,,,,
+DeleteComputer,To delete the existing computer,"User is on the ""Edit computer"" page by clicking on ""A.J.G.L.U. 2001""",1,"Click on the ""Delete this computer"" button on the top right corner","You should go back to the home page and see ""Done! Computer has been deleted"" message",PASS,
+,,,,,,,
+SearchExistingComputer,To check the search functionality returns proper results when serached for an existing computer,User is on the homepage,1,"Enter ""A.J.G.L.U. 2000"" as search input an click on ""Filter by name""","You should see 1 result with computer name as ""A.J.G.L.U. 2001""",PASS,
+,,,,,,,
+SearchNonexistingComputer,To check the search functionality returns no results when searched for a non existing computer,User is on the homepage,1,"Enter ""A.J.G.L.U. 2001"" as search input an click on ""Filter by name""","You should see ""Nothing to display""",PASS,
+,,,,,,,
+VerifyPagination,To check if the pagination works clicking on pagination buttons,"User is on the homepage. User is able to see 10 results in the table, see ""Displaying 1 to 10 of 579"" in the current pagination list element and the Previous button is disabled",1,Click on Next pagination button,"The table is updated with the next 10 results. User should see ""Displaying 11 to 20 of 579"" and Previous button enabled",PASS,
+,,,2,Click on Previous pagination button,"The table is updated with the previous 10 results. User should see ""Displaying 1 to 10 of 579"" and Previous button disabled",PASS,The same steps can be repeated with verfify Next button getting enabled on last but 1 page and disabled on the last page
+,,,,,,,
+VerifySorting,To check sorting by clicking on the column names,User is on the homepage and able to see a small triangle while hovering on the column names,1,Click on a computer name once,The cells in the column should be arranged in ascending order,FAIL,
+,,,2,Click on a computer name again,The cells in the column should be arranged in descending order,FAIL,These steps can be repeated for other columns in the table

@@ -5,9 +5,9 @@
 
   <testsuite name="crudComputer"
     errors="0" failures="0" hostname="" id="" package="crudComputer" skipped="0"
-    tests="3" time="13.56" timestamp="Sun, 30 Jul 2017 08:18:28 GMT">
+    tests="3" time="15.54" timestamp="Sun, 30 Jul 2017 11:53:32 GMT">
   
-    <testcase name="Create and read a new computer" classname="crudComputer" time="7.873" assertions="12">
+    <testcase name="Create and read a new computer" classname="crudComputer" time="9.790" assertions="12">
 
     
 
@@ -34,7 +34,7 @@
     
     </testcase>
   
-    <testcase name="Update and read a computer" classname="crudComputer" time="3.869" assertions="12">
+    <testcase name="Update and read a computer" classname="crudComputer" time="3.889" assertions="12">
 
     
 
@@ -61,7 +61,7 @@
     
     </testcase>
   
-    <testcase name="Delete a computer" classname="crudComputer" time="1.820" assertions="3">
+    <testcase name="Delete a computer" classname="crudComputer" time="1.862" assertions="3">
 
     
 
